@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageColorPrimary"
+    android:orientation="vertical"
+    tools:context=".activity.ContentModuleActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/content_recipe"
+        android:textColor="#6e6e6e"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnRecipeEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:text="@string/content_recipe_entry"
+        android:textColor="@color/textColorBlack" />
+
+    <Button
+        android:id="@+id/btnRecipeTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:visibility="gone"
+        android:text="@string/content_recipe_tab"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorBlack" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/content_novel"
+        android:textColor="#6e6e6e"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnNovelEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:visibility="gone"
+        android:text="@string/content_novel_entry"
+        android:textColor="@color/textColorBlack" />
+
+    <Button
+        android:id="@+id/btnNovelTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:visibility="gone"
+        android:text="@string/content_novel_tab"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorBlack" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/content_ks"
+        android:textColor="#6e6e6e"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnKsEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:text="@string/content_ks_entry"
+        android:textColor="@color/textColorBlack" />
+
+</LinearLayout>

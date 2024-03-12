@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pageColorPrimary">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/app_name"
+        app:titleTextColor="#ffffff"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="开屏广告"
+                android:gravity="center"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSplashAd"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/splash_ad"
+                    android:layout_marginRight="15dp" />
+
+                <Button
+                    android:id="@+id/btnSplashAdLoadShowSeparation"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/splash_ad_load_show" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="信息流广告"
+                android:gravity="center"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnNativeAd"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/native_ad"
+                    android:textColor="@color/textColorBlack"
+                    android:layout_marginRight="15dp"/>
+
+                <Button
+                    android:id="@+id/btnNativeExpressAd"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/native_express_ad"
+                    android:textColor="@color/textColorBlack" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBannerAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_background_button_selector"
+                android:stateListAnimator="@null"
+                android:text="@string/banner_ad"
+                android:textColor="@color/textColorBlack" />
+
+            <Button
+                android:id="@+id/btnInterstitialAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_background_button_selector"
+                android:stateListAnimator="@null"
+                android:text="@string/interstitial_ad"
+                android:textColor="@color/textColorBlack" />
+
+            <Button
+                android:id="@+id/btnRewardVodAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_background_button_selector"
+                android:stateListAnimator="@null"
+                android:text="@string/reward_vod_ad"
+                android:textColor="@color/textColorBlack" />
+
+            <Button
+                android:id="@+id/btnInterstitialAdAutoCLose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_background_button_selector"
+                android:stateListAnimator="@null"
+                android:text="@string/interstitial_ad_auto_close"
+                android:textColor="@color/textColorBlack" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:padding="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <Switch
+            android:id="@+id/switch_personalized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="个性化开关 " />
+
+    </RelativeLayout>
+
+</LinearLayout>

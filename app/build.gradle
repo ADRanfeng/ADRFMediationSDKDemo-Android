@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.ranfeng.mediationsdkdemo"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 202302221
+        versionName "1.202302221"
+        multiDexEnabled true
+        ndk {
+            // 设置支持的SO库架构（x86架构部分平台暂不支持，例如优量汇）
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword '123123'
+            storeFile file('..//ADRFMediationSDK.jks')
+            storePassword '123123'
+        }
+        debug {
+            keyAlias 'key0'
+            keyPassword '123123'
+            storeFile file('..//ADRFMediationSDK.jks')
+            storePassword '123123'
+        }
+    }
+
+    repositories {
+
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                //这里修改apk文件名
+                outputFileName = "ADRFSdkDemo-V${variant.versionName}.apk"
+            }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    // support支持库，如果是AndroidX请使用对应的支持库
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
+    // ADRFMediation主SDK，必须的
+    implementation(name: 'ADRFMediationCore-3.7.9.02221', ext: 'aar')
+
+    // OAID1.0.25版本适配器不支持其它版本，ADRFMediationSdk获取oaid使用
+    implementation(name: 'ADRFOAIDAdapter-1.0.25.02201', ext: 'aar')
+    // OAID库1.0.25
+    implementation(name: 'oaid_sdk_1.0.25', ext: 'aar')
+
+    // 然峰 ，必须的
+    implementation(name: 'RanfengAdapter-2.1.0.02221', ext: 'aar')
+    implementation(name: 'RanFengSDK-2.1.0.1', ext: 'aar')
+
+    // 天目 ，必须的
+    implementation(name: 'TianmuAdapter-2.1.0.02231', ext: 'aar')
+    implementation(name: 'TianmuSDK-2.1.0.2', ext: 'aar')
+
+    // 优量汇AdapterSdk，可选的
+    implementation(name: 'GdtAdapter-4.562.1432.02231', ext: 'aar')
+    implementation(name: 'gdt-4.562.1432', ext: 'aar')
+
+    // 头条AdapterSdk，可选的
+    implementation(name: 'ToutiaoAdapter-5.7.0.5.02231', ext: 'aar')
+    implementation(name: 'toutiao-5.7.0.5', ext: 'aar')
+
+    // 百度增强版AdapterSdk，可选的
+    implementation(name: 'BaiduAdapter-Enhanced-9.332.02221', ext: 'aar')
+    implementation(name: 'baiduenhanced-9.332', ext: 'aar')
+
+    // 快手AdapterSdk，可选的
+    implementation(name: 'KuaiShouAdapter-3.3.55.02221', ext: 'aar')
+    implementation(name: 'kuaishoubase-3.3.55', ext: 'aar')
+
+
+}
