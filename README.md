@@ -67,8 +67,8 @@ ADRFMediationSDK广告聚合SDK主要由**ADRFMediationSDK核心SDK**和一个�
     <td>APP启动界面常会使用开屏广告</td>
   </tr>
   <tr>
-    <td><a href="#ad_banner">Banner广告</a></td>
-    <td>Banner广告是横向贯穿整个可视页面的模板广告，需要将Banner广告视图添加到承载的广告容器中</td>
+    <td><a href="#ad_banner">横幅广告</a></td>
+    <td>Banner广告是横向贯穿整个可视页面的模板广告，需要将横幅广告视图添加到承载的广告容器中</td>
     <td>任意界面的固定位置，不建议放在RecyclerView、List这种滚动布局中当item</td>
   </tr>
   <tr>
@@ -92,6 +92,8 @@ ADRFMediationSDK广告聚合SDK主要由**ADRFMediationSDK核心SDK**和一个�
 
 
 ## 3. Demo及SDK下载链接
+
+> [Demo-演示APK下载地址](https://github.com/ADRanfeng/ADRFMediationSDKDemo-Android/blob/master/app-debug.apk)
 
 > 请参考文档
 
@@ -688,7 +690,7 @@ com.ranfeng.mediationsdk.config.InitConfig
 | isCanUsePhoneState(boolean isCanUsePhoneState) | 设置SDK是否可以使用IMEI等设备信息。参数说明：isCanUsePhoneState（true：开启，false：关闭， 默认：true）。|
 | isCanUseWifiState(boolean isCanUseWifiState) | 设置SDK是否可以使用WIFI信息。参数说明：isCanUseWifiState（true：开启，false：关闭， 默认：true）。|
 | agreePrivacyStrategy(boolean agreePrivacyStrategy) | 是否同意隐私政策。参数说明：agreePrivacyStrategy（true：开启，false：关闭， 默认：true）。|
-| filterThirdQuestion(boolean filterThirdQuestion) | 设置是否过滤第三方平台的问题广告（例如: 已知某个广告平台在某些机型的Banner广告可能存在问题，如果开启过滤，则在该机型将不再去获取该平台的Banner广告）。参数说明：filterThirdQuestion（true：开启，false：关闭， 默认：true）。|
+| filterThirdQuestion(boolean filterThirdQuestion) | 设置是否过滤第三方平台的问题广告（例如: 已知某个广告平台在某些机型的横幅广告可能存在问题，如果开启过滤，则在该机型将不再去获取该平台的Banner广告）。参数说明：filterThirdQuestion（true：开启，false：关闭， 默认：true）。|
 | setCustomDeviceInfoController(CustomDeviceInfoController controller) | 自定义设备信息。可选参数。<a href="#custom_controller"> 请参考5.7 向SDK传入设备标识 </a>|
 
 **CustomDeviceInfoController**
@@ -868,9 +870,9 @@ public void onAdReceive(AdInfo adInfo) {
 >
 
 
-### <a name="ad_banner">6.3 Banner横幅广告示例</a>
+### <a name="ad_banner">6.3 横幅广告示例</a>
 
-Banner横幅广告建议放置在 **固定位置**，而非ListView、RecyclerView、ViewPager等控件中充当Item，Banner广告支持多种尺寸比例，可在后台创建广告位时配置，Banner广告的宽度将会撑满容器，高度自适应，建议Banner广告容器高度也为自适应。
+横幅广告建议放置在 **固定位置**，而非ListView、RecyclerView、ViewPager等控件中充当Item，横幅广告支持多种尺寸比例，可在后台创建广告位时配置，横幅广告的宽度将会撑满容器，高度自适应，建议横幅广告容器高度也为自适应。
 
 #### 6.3.1 横幅广告主要 API
 
@@ -905,7 +907,7 @@ com.ranfeng.mediationsdk.ad.listener.RFBannerAdListener
 #### 6.3.2 横幅广告加载并展示
 
 ```java
-// 创建Banner广告实例，第一个参数可以是Activity或Fragment，第二个参数是广告容器（请保证容器不会拦截点击、触摸等事件）
+// 创建横幅广告实例，第一个参数可以是Activity或Fragment，第二个参数是广告容器（请保证容器不会拦截点击、触摸等事件）
 RFBannerAd bannerAd = new RFBannerAd(Activity activity, ViewGroup container);
 
 // 设置Banner广告监听
@@ -937,7 +939,7 @@ bannerAd.setListener(new RFBannerAdListener() {
     }
 });
 
-// 加载Banner广告，参数为广告位ID，同一个RFBannerAd只有一次loadAd有效
+// 加载横幅广告，参数为广告位ID，同一个RFBannerAd只有一次loadAd有效
 bannerAd.loadAd(String posId);
 ```
 
