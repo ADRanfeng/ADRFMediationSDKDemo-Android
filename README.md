@@ -597,7 +597,7 @@ ADRFMediationSDK.getInstance().init(
                 .isCanUsePhoneState(false)
                 .setCustomDeviceInfoController(new CustomDeviceInfoController() {
                     /**
-                     * 当isCanUsePhoneState=false时，可传入imei信息，天目使用您传入的imei信息
+                     * 当isCanUsePhoneState=false时，可传入imei信息，然峰使用您传入的imei信息
                      * @return imei信息
                      */
                     @Override
@@ -606,7 +606,7 @@ ADRFMediationSDK.getInstance().init(
                     }
 
                     /**
-                     * 当isCanUsePhoneState=false时，可传入AndroidId信息，天目使用您传入的AndroidId信息
+                     * 当isCanUsePhoneState=false时，可传入AndroidId信息，然峰使用您传入的AndroidId信息
                      * @return androidid信息
                      */
                     @Override
@@ -615,7 +615,7 @@ ADRFMediationSDK.getInstance().init(
                     }
 
                     /**
-                     * 当isCanUseLocation=false时，可传入地理位置信息，天目使用您传入的地理位置信息
+                     * 当isCanUseLocation=false时，可传入地理位置信息，然峰使用您传入的地理位置信息
                      * @return 极光地理位置参数JUnionLocationProvider
                      */
                     @Override
@@ -624,7 +624,7 @@ ADRFMediationSDK.getInstance().init(
                     }
 
                     /**
-                     * 当isCanUseWifiState=false时，可传入Mac地址信息，天目使用您传入的Mac地址信息
+                     * 当isCanUseWifiState=false时，可传入Mac地址信息，然峰使用您传入的Mac地址信息
                      * @return Mac地址
                      */
                     @Override
