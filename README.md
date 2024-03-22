@@ -154,7 +154,7 @@ dependencies {
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.android.support:design:28.0.0'
 
-        // ADRFMediation主SDK，必须的
+     // ADRFMediation主SDK，必须的
     implementation(name: 'ADRFMediationCore-3.7.9.02221', ext: 'aar')
 
     // OAID1.0.25版本适配器不支持其它版本，ADRFMediationSdk获取oaid使用
@@ -175,8 +175,8 @@ dependencies {
     implementation(name: 'gdt-4.562.1432', ext: 'aar')
 
     // 头条AdapterSdk，可选的
-    implementation(name: 'TianmuAdapter-2.1.0.02231', ext: 'aar')
-    implementation(name: 'TianmuSDK-2.1.0.2', ext: 'aar')
+    implementation(name: 'ToutiaoAdapter-5.7.0.5.02231', ext: 'aar')
+    implementation(name: 'toutiao-5.7.0.5', ext: 'aar')
 
     // 百度增强版AdapterSdk，可选的
     implementation(name: 'BaiduAdapter-Enhanced-9.332.02221', ext: 'aar')
