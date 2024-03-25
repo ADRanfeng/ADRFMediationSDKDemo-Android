@@ -1,4 +1,4 @@
-# ADRFMediationSDK Android Sdk——接入文档 V3.7.9.02221
+# ADRFMediationSDK Android Sdk——接入文档 V3.7.9.02222
 
  目录
 
@@ -36,7 +36,7 @@ ADRFMediationSDK广告聚合SDK主要由**ADRFMediationSDK核心SDK**和一个�
 
 | Name      | 大小 | 版本号 |
 | --------- | ----- | ------------ | 
-| 然峰聚合基础包 | 0.30M  | v3.7.9.02221 |  
+| 然峰聚合基础包 | 0.30M  | v3.7.9.02222 |
 | OAID      | 1.10M  | —            | 
 | OAID适配器 | 0.03M  | v1.0.25.08024 |  
 
