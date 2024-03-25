@@ -44,7 +44,7 @@ ADRFMediationSDK广告聚合SDK主要由**ADRFMediationSDK核心SDK**和一个�
 
 | Name      | 容量 | 版本号 | 
 | --------- | -------- | ----------------- | 
-| ranfeng   | 1.50M    | v2.1.0.02221 |  
+| ranfeng   | 1.50M    | v2.1.0.02221 |
 | tianmu    | 1.80M    | v2.1.0.02231 |  
 | gdt       | 1.94M    | v4.562.1432.02231 |  
 | toutiao   | 7.03M    | v5.7.0.5.02231 |  
@@ -164,7 +164,7 @@ dependencies {
 
     // 然峰 ，必须的
     implementation(name: 'RanfengAdapter-2.1.0.02221', ext: 'aar')
-    implementation(name: 'RanFengSDK-2.1.0.1', ext: 'aar')
+    implementation(name: 'RanFengSDK-2.1.0.2', ext: 'aar')
 
     // 天目 ，必须的
     implementation(name: 'TianmuAdapter-2.1.0.02231', ext: 'aar')

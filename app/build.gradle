@@ -90,7 +90,7 @@ dependencies {
 
     // 然峰 ，必须的
     implementation(name: 'RanfengAdapter-2.1.0.02221', ext: 'aar')
-    implementation(name: 'RanFengSDK-2.1.0.1', ext: 'aar')
+    implementation(name: 'RanFengSDK-2.1.0.2', ext: 'aar')
 
     // 天目 ，必须的
     implementation(name: 'TianmuAdapter-2.1.0.02231', ext: 'aar')
