@@ -155,7 +155,7 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
 
      // ADRFMediation主SDK，必须的
-    implementation(name: 'ADRFMediationCore-3.7.9.02221', ext: 'aar')
+    implementation(name: 'ADRFMediationCore-3.7.9.02222', ext: 'aar')
 
     // OAID1.0.25版本适配器不支持其它版本，ADRFMediationSdk获取oaid使用
     implementation(name: 'ADRFOAIDAdapter-1.0.25.02201', ext: 'aar')
@@ -164,7 +164,7 @@ dependencies {
 
     // 然峰 ，必须的
     implementation(name: 'RanfengAdapter-2.1.0.02221', ext: 'aar')
-    implementation(name: 'RanFengSDK-2.1.0.2', ext: 'aar')
+    implementation(name: 'RanFengSDK-2.1.0.3', ext: 'aar')
 
     // 天目 ，必须的
     implementation(name: 'TianmuAdapter-2.1.0.02231', ext: 'aar')
